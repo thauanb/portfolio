@@ -1,15 +1,29 @@
+/* [ ] Padronização              */
+/*      [ ] Cores */
+/*      [ ] Criação de vars */
+/*      [ ] Hierarquias */
+
 #header {
-  background-color: #333; /* Cor de fundo do cabeçalho, apenas para exemplo */
+  background-color: #5606d8;
+  font-size: 20px;
+  padding-left: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .menu ul {
-  list-style-type: none; /* Remove os marcadores de lista */
-  padding: 0; /* Remove o preenchimento padrão da lista */
+  list-style-type: none;
+  padding: 0;
 }
 
 .menu li {
   display: inline; /* Define os itens da lista como elementos inline */
   margin-right: 10px; /* Espaço entre os itens da lista (opcional) */
+}
+
+.menu a:hover {
+  color: aqua;
+  font-size: 20px;
 }
 
 .menu a {
