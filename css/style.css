@@ -1,0 +1,18 @@
+#header {
+  background-color: #333; /* Cor de fundo do cabeçalho, apenas para exemplo */
+}
+
+.menu ul {
+  list-style-type: none; /* Remove os marcadores de lista */
+  padding: 0; /* Remove o preenchimento padrão da lista */
+}
+
+.menu li {
+  display: inline; /* Define os itens da lista como elementos inline */
+  margin-right: 10px; /* Espaço entre os itens da lista (opcional) */
+}
+
+.menu a {
+  color: white; /* Cor do texto dos links, apenas para exemplo */
+  text-decoration: none; /* Remove sublinhado dos links */
+}
