@@ -26,6 +26,9 @@ a {
 }
 
 #header {
+  /* Como justificar o tamanho da imagem      */
+  display: flex;
+  align-content: center;
   background-color: var(--color_header_background);
   font-size: 20px;
   padding-left: 10px;
@@ -55,4 +58,20 @@ a {
   background-color: var(--color-body-backgroud);
   border-bottom: 2px solid;
   text-decoration: solid;
+}
+
+.icon {
+  vertical-align: sub;
+}
+
+/* Material Icons */
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+.material-icons.md-36 {
+  font-size: 36px;
+}
+.material-icons.md-48 {
+  font-size: 48px;
 }
