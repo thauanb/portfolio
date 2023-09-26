@@ -9,18 +9,29 @@
   --font-size--header: 20px;
 }
 
+::selection {
+  background-color: var(--color-seletion);
+  color: var(--color_header_background);
+}
+
 body {
+  text-rendering: optimizeLegibility;
   background-color: var(--color-body-backgroud);
   font-family: var(--font-body);
   font-size: 14px;
 }
 
+a {
+  text-decoration: none;
+}
+
 #header {
-  background-color: white;
+  background-color: var(--color_header_background);
   font-size: 20px;
-  padding-left: 15px;
-  padding-top: 2px;
+  padding-left: 10px;
+  padding-top: 4px;
   padding-bottom: 2px;
+  user-select: none; /* Torna nula a seleção */
 }
 
 .menu ul {
@@ -41,7 +52,7 @@ body {
 }
 .menu a:hover {
   cursor: pointer;
-  background-color: var(--color_header_background);
+  background-color: var(--color-body-backgroud);
   border-bottom: 2px solid;
   text-decoration: solid;
 }
