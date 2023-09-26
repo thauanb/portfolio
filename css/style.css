@@ -1,11 +1,18 @@
-/* [ ] Padronização              */
-/*      [ X ] Cores */
-/*      [ ] Criação de vars */
-/*      [ ] Hierarquias */
-
 :root {
+  --color-cyan: #50e3c2;
   --color_header_background: #fff;
   --color_header_texto: #000;
+  --color-seletion: var(--color-cyan);
+  --color-error: #e00;
+  --color-body-backgroud: #fafafa;
+  --font-body: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  --font-size--header: 20px;
+}
+
+body {
+  background-color: var(--color-body-backgroud);
+  font-family: var(--font-body);
+  font-size: 14px;
 }
 
 #header {
@@ -27,12 +34,14 @@
 }
 
 .menu a {
+  padding: 16px 12px;
+  font-size: var(--font-size--header);
   text-decoration: none;
   color: var(--color_header_texto);
 }
 .menu a:hover {
-  font-size: 20px;
-  border-bottom: 5px solid black;
+  cursor: pointer;
+  background-color: var(--color_header_background);
+  border-bottom: 2px solid;
   text-decoration: solid;
-  text-decoration-color: black;
 }
