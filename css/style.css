@@ -1,40 +1,22 @@
 :root {
-  --color-cyan: #50e3c2;
   --color_header_background: #fff;
   --color_header_texto: #000;
-  --color-seletion: var(--color-cyan);
-  --color-error: #e00;
-  --color-body-backgroud: #fafafa;
-  --font-body: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  --font-size--header: 20px;
 }
 
-::selection {
-  background-color: var(--color-seletion);
-  color: var(--color_header_background);
+.box-shadow-bottom {
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.1);
 }
 
-body {
-  text-rendering: optimizeLegibility;
-  background-color: var(--color-body-backgroud);
-  font-family: var(--font-body);
-  font-size: 14px;
-}
-
-a {
-  text-decoration: none;
+.icon {
+  vertical-align: sub;
 }
 
 #header {
-  /* Como justificar o tamanho da imagem      */
-  display: flex;
-  align-content: center;
-  background-color: var(--color_header_background);
+  background-color: white;
   font-size: 20px;
-  padding-left: 10px;
-  padding-top: 4px;
+  padding-left: 15px;
+  padding-top: 2px;
   padding-bottom: 2px;
-  user-select: none; /* Torna nula a seleção */
 }
 
 .menu ul {
@@ -48,30 +30,37 @@ a {
 }
 
 .menu a {
-  padding: 16px 12px;
-  font-size: var(--font-size--header);
   text-decoration: none;
   color: var(--color_header_texto);
+  vertical-align: sub;
+  font-size: inherit;
 }
 .menu a:hover {
-  cursor: pointer;
-  background-color: var(--color-body-backgroud);
-  border-bottom: 2px solid;
+  font-size: 18px;
+  border-bottom: 2px solid black;
   text-decoration: solid;
+  text-decoration-color: black;
+  font-size: inherit;
 }
 
-.icon {
-  vertical-align: sub;
-}
-
-/* Material Icons */
-
-.material-icons.md-24 {
-  font-size: 24px;
-}
-.material-icons.md-36 {
-  font-size: 36px;
-}
-.material-icons.md-48 {
-  font-size: 48px;
+@media (max-width: 400px) {
+  #header {
+    width: 350px;
+  }
+  .material-icon.icon {
+    font-size: 18px;
+  }
+  .menu a:hover {
+    font-size: 18px;
+    text-decoration: solid;
+    text-decoration-color: black;
+    display: relative;
+    vertical-align: sub;
+  }
+  .menu a {
+    font-size: 18px;
+    text-decoration: solid;
+    text-decoration-color: black;
+    display: relative;
+  }
 }
