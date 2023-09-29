@@ -27,6 +27,10 @@ html {
   background-color: var(--color-vscode-background);
 }
 
+h1 {
+  margin: 20px !important;
+}
+
 .box-shadow-bottom {
   box-shadow: 6px 20px 20px rgba(8, 6, 9, 0.4);
 }
@@ -42,11 +46,63 @@ html {
 .write-container {
   margin-top: 25px;
   padding: 20px;
-  background-color: var(--color-header_background);
+  width: 600px;
+  background-color: var(--color-vscode-background);
+}
+/*----------- Typewriter Effect ------------*/
+
+.typer-color-green {
+  color: #00ff00;
+}
+.typer-color-red {
+  color: #ef0808;
+}
+.typer-color-purple {
+  color: #8c0079;
+}
+.typer-color-orange {
+  color: #ff8000;
 }
 
-.typing {
+.typewriter h1 {
+  color: white;
+  font-family: monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.2em;
+  direction: ltr;
+  font-size: 2em;
 }
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
+}
+
+.typewriter h1 {
+  animation: typing 7s steps(30) infinite alternate,
+    blink-caret 0.6s step-end infinite;
+}
+
+/*------------------------------------- */
 
 .menu ul {
   list-style-type: none;
