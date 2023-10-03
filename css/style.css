@@ -47,6 +47,7 @@ h1 {
   margin-top: 25px;
   padding: 20px;
   width: 600px;
+  color: white;
   background-color: var(--color-vscode-background);
 }
 /*----------- Typewriter Effect ------------*/
@@ -63,43 +64,101 @@ h1 {
 .typer-color-orange {
   color: #ff8000;
 }
+.typer-color-blue {
+  color: #00ffff;
+}
+.typer-color-cg {
+  color: #f54332;
+}
 
-.typewriter h1 {
-  color: white;
-  font-family: monospace;
-  overflow: hidden;
-  white-space: nowrap;
+.line {
+  position: relative;
+  top: 50%;
+  width: auto;
   margin: 0 auto;
-  letter-spacing: 0.2em;
-  direction: ltr;
-  font-size: 2em;
+  border-right: 4px solid rgba(251, 0, 255, 0.801);
+  font-size: 180%;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+.line.center {
+  text-align: center;
 }
 
-@keyframes typing {
-  0% {
+.text-big {
+  font-size: 140%;
+}
+
+.waviy span {
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+/* Animation */
+
+.anim-typewriter {
+  animation: typewriter_l1 4s steps(60) 1s normal both,
+    blinkTextCursor 500ms steps(60) infinite normal;
+}
+
+.anim-typewriter.w-800 {
+  width: 800px;
+}
+.anim-typewriter.l1 {
+  animation: typewriter_l1 4s steps(60) 4s normal both,
+    blinkTextCursor 500ms steps(60) infinite normal;
+}
+.anim-typewriter.l2 {
+  animation: typewriter_l2 8s steps(60) 8s normal both,
+    blinkTextCursor 500ms steps(60) infinite normal;
+}
+.anim-typewriter.l3 {
+  animation: typewriter_l3 12s steps(60) 14s normal both,
+    blinkTextCursor 500ms steps(60) infinite normal;
+}
+@keyframes typewriter_l1 {
+  from {
     width: 0;
   }
-  50% {
-    width: 100%;
+  to {
+    width: 350px;
   }
-  100% {
+}
+@keyframes typewriter_l2 {
+  from {
     width: 0;
+  }
+  to {
+    width: 700px;
+  }
+}
+@keyframes typewriter_l3 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 710px;
+  }
+}
+@keyframes blinkTextCursor {
+  from {
+    border-right: 4px solid rgba(251, 0, 255, 0.801);
+  }
+  to {
+    border-right-color: transparent;
   }
 }
 
-@keyframes blink-caret {
+@keyframes flip {
   0%,
-  100% {
-    border-color: transparent;
+  80% {
+    transform: rotateY(360deg);
   }
-  50% {
-    border-color: rgb(255, 255, 255);
-  }
-}
-
-.typewriter h1 {
-  animation: typing 7s steps(30) infinite alternate,
-    blink-caret 0.6s step-end infinite;
 }
 
 /*------------------------------------- */
