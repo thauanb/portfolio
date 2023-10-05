@@ -1,36 +1,42 @@
+/* Colors */
 :root {
-  --color-header_background: #fff;
-  --color-header_texto: #000;
-  --color-vscode-background: #030d22;
+  --background-color: #030d22;
+  --header-background-color: #fff;
+  --header-text-color: #000;
+  --primary-color: #00ff00;
+  --secondary-color: #ef0808;
+  --tertiary-color: #8c0079;
+  --accent-color: #ff8000;
+  --highlight-color: #00ffff;
 }
 
+/* Header Styles */
 #header {
   display: flex;
   width: 100%;
   height: 45px !important;
-  background-color: var(--color-header_background);
+  background-color: var(--header-background-color);
   font-size: 20px;
 }
 
 .container {
-  /* Inicia o flex box */
   display: flex;
-  /* alinha horizontalmente o conteudo dos itens ao longo do eixo principal */
   justify-content: left;
-  /* alinhamento vertical .... */
   align-items: center;
   padding-left: 10px;
   padding-top: 4px;
 }
 
+/* General Styles */
 html {
-  background-color: var(--color-vscode-background);
+  background-color: var(--background-color);
 }
 
 h1 {
   margin: 20px !important;
 }
 
+/* Shadows */
 .box-shadow-bottom {
   box-shadow: 6px 20px 20px rgba(8, 6, 9, 0.4);
 }
@@ -39,38 +45,41 @@ h1 {
   box-shadow: 0px 0px 0px rgba(98, 0, 202, 0.638);
 }
 
+/* Icons */
 .icon {
   vertical-align: sub;
 }
 
+/* Text Container Styles */
 .write-container {
   margin-top: 25px;
   padding: 20px;
   width: 600px;
   color: white;
-  background-color: var(--color-vscode-background);
+  background-color: var(--background-color);
 }
-/*----------- Typewriter Effect ------------*/
 
+/* Text Effects */
 .typer-color-green {
-  color: #00ff00;
+  color: var(--primary-color);
 }
 .typer-color-red {
-  color: #ef0808;
+  color: var(--secondary-color);
 }
 .typer-color-purple {
-  color: #8c0079;
+  color: var(--tertiary-color);
 }
 .typer-color-orange {
-  color: #ff8000;
+  color: var(--accent-color);
 }
 .typer-color-blue {
-  color: #00ffff;
+  color: var(--highlight-color);
 }
 .typer-color-cg {
-  color: #f54332;
+  color: var(--other-color);
 }
 
+/* Typewriter Effects */
 .line {
   position: relative;
   top: 50%;
@@ -91,6 +100,7 @@ h1 {
   font-size: 140%;
 }
 
+/* Animations */
 .waviy span {
   position: relative;
   display: inline-block;
@@ -98,8 +108,6 @@ h1 {
   animation: flip 2s infinite;
   animation-delay: calc(0.2s * var(--i));
 }
-
-/* Animation */
 
 .anim-typewriter {
   animation: typewriter_l1 4s steps(60) 1s normal both,
@@ -121,6 +129,7 @@ h1 {
   animation: typewriter_l3 12s steps(60) 14s normal both,
     blinkTextCursor 500ms steps(60) infinite normal;
 }
+
 @keyframes typewriter_l1 {
   from {
     width: 0;
@@ -129,6 +138,7 @@ h1 {
     width: 350px;
   }
 }
+
 @keyframes typewriter_l2 {
   from {
     width: 0;
@@ -137,6 +147,7 @@ h1 {
     width: 700px;
   }
 }
+
 @keyframes typewriter_l3 {
   from {
     width: 0;
@@ -145,6 +156,7 @@ h1 {
     width: 710px;
   }
 }
+
 @keyframes blinkTextCursor {
   from {
     border-right: 4px solid rgba(251, 0, 255, 0.801);
@@ -161,8 +173,7 @@ h1 {
   }
 }
 
-/*------------------------------------- */
-
+/* Menu */
 .menu ul {
   list-style-type: none;
   padding: 0;
@@ -174,10 +185,11 @@ h1 {
 
 .menu a {
   text-decoration: none;
-  color: var(--color_header_texto);
+  color: var(--header-text-color);
   vertical-align: sub;
   font-size: inherit;
 }
+
 .menu a:hover {
   font-size: 18px;
   border-bottom: 2px solid black;
@@ -192,9 +204,11 @@ h1 {
     margin-left: 60px;
     height: 35px !important;
   }
+
   .material-icon.icon {
     font-size: 18px;
   }
+
   .menu a:hover {
     font-size: 16px;
     text-decoration: solid;
@@ -202,12 +216,14 @@ h1 {
     display: relative;
     vertical-align: sub;
   }
+
   .menu a {
     font-size: 16px;
     text-decoration: solid;
     text-decoration-color: black;
     display: relative;
   }
+
   .container {
     justify-content: space-evenly;
   }
