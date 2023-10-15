@@ -4,13 +4,14 @@
   --header-text-color: #000;
   --primary-color: #00ff00;
   --secondary-color: #ef0808;
-  --tertiary-color: #8c0079;
-  --accent-color: #ff8000;
+  --color-python: #8c0079;
+  --color-js: #ff8800;
   --color-black: #000;
   --highlight-color: #00ffff;
   --color-header-itens: var(--primary-color);
   --color-softblack: #131313;
   --color-header-itens-white: white;
+  --color-animation-blink: var(--primary-color);
 }
 
 ::selection {
@@ -90,14 +91,14 @@ h1 {
 .typer-color-red {
   color: var(--secondary-color);
 }
-.typer-color-purple {
-  color: var(--tertiary-color);
-}
-.typer-color-orange {
-  color: var(--accent-color);
-}
-.typer-color-blue {
+.typer-color-full {
   color: var(--highlight-color);
+}
+.typer-color-python {
+  color: var(--color-python);
+}
+.typer-color-js {
+  color: var(--color-js);
 }
 
 /* Typewriter Effects */
@@ -180,7 +181,7 @@ h1 {
 
 @keyframes blinkTextCursor {
   from {
-    border-right: 4px solid rgba(251, 0, 255, 0.801);
+    border-right: 7px solid var(--color-animation-blink);
   }
   to {
     border-right-color: transparent;
@@ -233,7 +234,7 @@ h1 {
   color: var(--primary-color);
 }
 
-@media (max-width: 575px) {
+@media (max-width: 600px) {
   #header {
     max-height: 54px !important;
     font-size: 12px;
@@ -248,10 +249,18 @@ h1 {
     text-decoration-color: black;
     display: relative;
   }
-  .write-container {
-    font-size: 115%;
+  .write-container.h1 {
     padding: 5px;
   }
+  .line.anim-typewriter.l2 {
+    font-size: 100%;
+    max-width: 525px;
+  }
+  .line.anim-typewriter.l3 {
+    font-size: 100%;
+    max-width: 520px;
+  }
+
   .matrix-video {
     height: 90%;
   }
