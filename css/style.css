@@ -10,7 +10,7 @@
   --highlight-color: #00ffff;
   --color-header-itens: var(--primary-color);
   --color-softblack: #131313;
-  --color-header-itens-white: white;
+  --color-white: white;
   --color-animation-blink: var(--primary-color);
 }
 
@@ -18,32 +18,8 @@
   color: var(--highlight-color);
 }
 
-/* Header Styles */
-#header {
-  display: flex;
-  width: 100%;
-  min-height: 40px;
-  max-height: 54px;
-  background-color: var(--color-softblack);
-  font-size: 12px;
-}
-
-/* Menu */
-.menu {
-  font-size: inherit;
-  max-height: 37px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 10px;
-}
-
-.menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.menu li {
-  display: inline;
+a {
+  text-decoration: none;
 }
 
 .menu a {
@@ -56,22 +32,21 @@
   margin-right: 5px;
 }
 
-.menu a:hover {
-  text-decoration: solid;
-  text-decoration-color: black;
-  display: relative;
-  vertical-align: sub;
-  color: var(--primary-color);
-}
-.material-icons:hover {
-  color: var(--primary-color);
+.menu li,
+ul {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
 }
 
-.container {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 200px;
+.container-fluid {
+  background-color: var(--color-softblack);
+  color: var(--color-white);
+  height: 50px;
+  border-top-width: 0px;
+  padding-top: 10px;
+  border-bottom-width: 0px;
+  padding-bottom: 10px;
 }
 
 .relative {
