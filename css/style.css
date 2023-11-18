@@ -10,8 +10,9 @@
   --highlight-color: #00ffff;
   --color-header-itens: var(--primary-color);
   --color-softblack: #131313;
-  --color-white: white;
+  --color-white: #ffff;
   --color-animation-blink: var(--primary-color);
+  --write-container-mt: 60px;
 }
 
 ::selection {
@@ -22,14 +23,30 @@ a {
   text-decoration: none;
 }
 
+a.dropdown-item {
+  background-color: var(--color-softblack) !important;
+  color: var(--highlight-color);
+}
+
+.container-fluid {
+  background-color: var(--color-softblack);
+  color: var(--color-white);
+  border-top-width: 0px;
+  padding-top: 10px;
+  border-bottom-width: 0px;
+  padding-bottom: 10px;
+}
+
 .menu {
   padding-left: 0;
+  font-size: 16px;
+  height: 1.5em; /* a altura será o 150% da fonte atual do elemento */
 }
 .menu a {
   text-decoration: none;
   vertical-align: sub;
   align-items: baseline;
-  font-size: 14px;
+
   text-decoration: solid;
   color: var(--color-header-itens-white);
   margin-right: 5px;
@@ -45,14 +62,8 @@ ul {
   padding: 0;
 }
 
-.container-fluid {
+ul.dropdown-menu {
   background-color: var(--color-softblack);
-  color: var(--color-white);
-  height: 50px;
-  border-top-width: 0px;
-  padding-top: 10px;
-  border-bottom-width: 0px;
-  padding-bottom: 10px;
 }
 
 .relative {
@@ -89,7 +100,7 @@ h1 {
 
 /* Text Container Styles */
 .write-container {
-  margin-top: 25px;
+  margin-top: var(--write-container-mt);
   padding: 20px;
   max-width: 400px;
   color: white;
