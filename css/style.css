@@ -22,6 +22,9 @@ a {
   text-decoration: none;
 }
 
+.menu {
+  padding-left: 0;
+}
 .menu a {
   text-decoration: none;
   vertical-align: sub;
@@ -30,6 +33,9 @@ a {
   text-decoration: solid;
   color: var(--color-header-itens-white);
   margin-right: 5px;
+}
+.menu a:hover {
+  color: var(--highlight-color);
 }
 
 .menu li,
