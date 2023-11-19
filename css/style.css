@@ -23,10 +23,11 @@ a {
   text-decoration: none;
 }
 
-a.dropdown-item {
-  background-color: var(--color-softblack) !important;
-  color: var(--highlight-color);
+a > i {
+  font-size: 18px;
 }
+
+
 
 .container-fluid {
   background-color: var(--color-softblack);
@@ -62,10 +63,24 @@ ul {
   padding: 0;
 }
 
+
 ul.dropdown-menu {
   background-color: var(--color-softblack);
 }
 
+ul.dropdown-menu.show {
+  background-color: var(--color-softblack);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+}
+
+
+.dropdown-item {
+  background-color: var(--color-softblack) !important;
+  color: var(--highlight-color);
+}
 .relative {
   position: relative;
 }
