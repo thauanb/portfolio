@@ -21,12 +21,16 @@
 
 a {
   text-decoration: none;
+  cursor: pointer !important;
+}
+
+label{
+  cursor: pointer !important;
 }
 
 a > i {
   font-size: 18px;
 }
-
 
 
 .container-fluid {
@@ -39,6 +43,7 @@ a > i {
 }
 
 .menu {
+  margin-left: -20px;
   padding-left: 0;
   font-size: 16px;
   height: 1.5em; /* a altura será o 150% da fonte atual do elemento */
@@ -60,6 +65,8 @@ ul {
   display: inline;
   list-style-type: none;
   padding: 0;
+  padding-right: 10px;
+
 }
 
 
@@ -75,8 +82,8 @@ ul.dropdown-menu.show {
   align-content: center;
   align-items: flex-start;
   /* deslocamento do dropdown */
-  margin: 7px !important;
-  transform: translate(24px, 0.1px) !important;
+  margin-left: 0;
+  margin-top: 6px !important;
 }
 
 
