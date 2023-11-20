@@ -47,7 +47,6 @@ a > i {
   text-decoration: none;
   vertical-align: sub;
   align-items: baseline;
-
   text-decoration: solid;
   color: var(--color-header-itens-white);
   margin-right: 5px;
@@ -66,6 +65,7 @@ ul {
 
 ul.dropdown-menu {
   background-color: var(--color-softblack);
+
 }
 
 ul.dropdown-menu.show {
@@ -74,6 +74,9 @@ ul.dropdown-menu.show {
   flex-direction: column;
   align-content: center;
   align-items: flex-start;
+  /* deslocamento do dropdown */
+  margin: 7px !important;
+  transform: translate(24px, 0.1px) !important;
 }
 
 
