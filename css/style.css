@@ -15,27 +15,40 @@
   --write-container-mt: 60px;
   
 [data-theme=light]{
-  --menu-bg-color          : var(--color-white) !important;  
-  --ico-color              : var(--color-softblack) !important;
-  --dropdown-bg-color      : var(--color-white) !important;
-  --dropdown-item-bg-color : var(--color-white) !important;
-  --link-hover-color       : var(--highlight-color)!important;
-  --check-color            :  var(--color-softblack) !important;
+  --menu-bg-color          : var(--color-white) ;  
+  --ico-color              : var(--color-softblack) ;
+  --dropdown-bg-color      : var(--color-white) ;
+  --dropdown-item-bg-color : var(--color-white) ;
+  --link-hover-color       : var(--highlight-color);
+  --check-color            :  var(--color-softblack);
+  --x : var(--color-black)
+
 
 
 }
 [data-theme=dark]{
-  --menu-bg-color          : var(--color-softblack) !important; 
-  --ico-color              : var(--color-white) !important;
-  --dropdown-bg-color      : var(--color-softblack) !important;
-  --dropdown-item-bg-color : var(--color-softblack) !important;
-  --link-hover-color       : var(--highlight-color)!important;
-  --check-color            : var(--highlight-color)!important;
+  --menu-bg-color          : var(--color-softblack) ;
+  --ico-color              : var(--color-white);
+  --dropdown-bg-color      : var(--color-softblack) ;
+  --dropdown-item-bg-color : var(--color-softblack) ;
+  --link-hover-color       : var(--highlight-color);
+  --check-color            : var(--highlight-color);
 }
 }
 
 ::selection {
   color: var(--highlight-color);
+}
+
+html{
+  background-color: var(--menu-bg-color);
+}
+
+body {
+  margin: 0;
+  padding: 0 ;
+  background-color: var(--menu-bg-color);
+
 }
 
 a {
@@ -63,7 +76,7 @@ label{
   padding-top: 10px;
   border-bottom-width: 0px;
   padding-bottom: 10px;
-  background-color: var(--menu-bg-color)
+  background-color: var(--menu-bg-color);
 }
 
 .menu {
@@ -116,10 +129,7 @@ ul.dropdown-menu.show {
 /* General Styles */
 
 
-body {
-  margin: 0px;
-  padding: 0px;
-}
+
 
 h1 {
   margin: 20px !important;
@@ -305,7 +315,7 @@ h1 {
   }
 
   .matrix-video {
-    height: 400px;
-    width: 600px;
+    height: 100%;
+    width: 100%;
   }
 }
