@@ -162,7 +162,7 @@ h1 {
 .write-container {
   margin-top: var(--write-container-mt);
   padding: 20px;
-  max-width: 400px;
+  max-width: calc(100vw-30vw);
   color: white;
   background-color: var(--color-softblack);
 }
@@ -212,6 +212,10 @@ h1 {
   font-size: 140%;
 }
 
+.matrix-video {
+  height: 100vh;
+  width: 100vw;
+}
 
 /* Animations */
 .waviy span {
@@ -225,10 +229,8 @@ h1 {
 .anim-typewriter {
   animation: typewriter_l1 4s steps(60) 1s normal both,
     blinkTextCursor 500ms steps(60) infinite normal;
-}
+    width: 100vh;
 
-.anim-typewriter.w-800 {
-  width: 800px;
 }
 .anim-typewriter.l1 {
   animation: typewriter_l1 4s steps(60) 4s normal both,
@@ -237,11 +239,13 @@ h1 {
 .anim-typewriter.l2 {
   animation: typewriter_l2 8s steps(60) 8s normal both,
     blinkTextCursor 500ms steps(60) infinite normal;
-}
+
+  }
 .anim-typewriter.l3 {
   animation: typewriter_l3 12s steps(60) 14s normal both,
     blinkTextCursor 500ms steps(60) infinite normal;
-}
+
+  }
 
 @keyframes typewriter_l1 {
   from {
@@ -306,15 +310,10 @@ h1 {
   }
   .line.anim-typewriter.l2 {
     font-size: 100%;
-    max-width: 525px;
   }
   .line.anim-typewriter.l3 {
     font-size: 100%;
-    max-width: 520px;
   }
 
-  .matrix-video {
-    height: 600px !important;
-    width: 600px !important;
-  }
 }
+
