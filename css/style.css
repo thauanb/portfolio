@@ -13,6 +13,25 @@
   --color-white: #ffff;
   --color-animation-blink: var(--primary-color);
   --write-container-mt: 60px;
+  
+[data-theme=light]{
+  --menu-bg-color          : var(--color-white) !important;  
+  --ico-color              : var(--color-softblack) !important;
+  --dropdown-bg-color      : var(--color-white) !important;
+  --dropdown-item-bg-color : var(--color-white) !important;
+  --link-hover-color       : var(--highlight-color)!important;
+  --check-color            :  var(--color-softblack) !important;
+
+
+}
+[data-theme=dark]{
+  --menu-bg-color          : var(--color-softblack) !important; 
+  --ico-color              : var(--color-white) !important;
+  --dropdown-bg-color      : var(--color-softblack) !important;
+  --dropdown-item-bg-color : var(--color-softblack) !important;
+  --link-hover-color       : var(--highlight-color)!important;
+  --check-color            : var(--highlight-color)!important;
+}
 }
 
 ::selection {
@@ -24,22 +43,27 @@ a {
   cursor: pointer !important;
 }
 
-label{
-  cursor: pointer !important;
+a:hover{
+  color: var(--link-hover-color ) !important;
 }
-
 a > i {
   font-size: 18px;
 }
 
 
+label{
+  cursor: pointer !important;
+  color: var(--ico-color);
+}
+
+
+
 .container-fluid {
-  background-color: var(--color-softblack);
-  color: var(--color-white);
   border-top-width: 0px;
   padding-top: 10px;
   border-bottom-width: 0px;
   padding-bottom: 10px;
+  background-color: var(--menu-bg-color)
 }
 
 .menu {
@@ -48,17 +72,15 @@ a > i {
   font-size: 16px;
   height: 1.5em; /* a altura será o 150% da fonte atual do elemento */
 }
+
 .menu a {
   text-decoration: none;
   vertical-align: sub;
   align-items: baseline;
   text-decoration: solid;
-  color: var(--color-header-itens-white);
   margin-right: 5px;
 }
-.menu a:hover {
-  color: var(--highlight-color);
-}
+
 
 .menu li,
 ul {
@@ -66,17 +88,11 @@ ul {
   list-style-type: none;
   padding: 0;
   padding-right: 10px;
-
 }
 
 
-ul.dropdown-menu {
-  background-color: var(--color-softblack);
-
-}
 
 ul.dropdown-menu.show {
-  background-color: var(--color-softblack);
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -84,21 +100,21 @@ ul.dropdown-menu.show {
   /* deslocamento do dropdown */
   margin-left: 0;
   margin-top: 6px !important;
+  background-color: var(--dropdown-bg-color);
+}
+
+.dropdown-item{
+  background-color: var(--dropdown-item-bg-color) !important;
 }
 
 
-.dropdown-item {
-  background-color: var(--color-softblack) !important;
-  color: var(--highlight-color);
-}
+
 .relative {
   position: relative;
 }
 
 /* General Styles */
-html {
-  background-color: var(--color-softblack);
-}
+
 
 body {
   margin: 0px;
@@ -120,7 +136,17 @@ h1 {
 
 /* Icons */
 .icon {
+  color: var(--ico-color);
   vertical-align: text-bottom;
+}
+
+.icon:hover,span:hover{
+  color: var(--link-hover-color);
+}
+
+.form-check-input{
+  background-color: var(--check-color)!important;
+  border-color: var(--check-color)!important;
 }
 
 /* Text Container Styles */
@@ -176,6 +202,7 @@ h1 {
 .text-big {
   font-size: 140%;
 }
+
 
 /* Animations */
 .waviy span {
