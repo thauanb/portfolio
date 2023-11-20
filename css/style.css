@@ -10,44 +10,41 @@
   --highlight-color: #00ffff;
   --color-header-itens: var(--primary-color);
   --color-softblack: #131313;
-  --color-white: #ffff;
+  --color-white: #ffffff;
   --color-animation-blink: var(--primary-color);
   --write-container-mt: 60px;
-  
-[data-theme=light]{
-  --menu-bg-color          : var(--color-white) ;  
-  --ico-color              : var(--color-softblack) ;
-  --dropdown-bg-color      : var(--color-white) ;
-  --dropdown-item-bg-color : var(--color-white) ;
-  --link-hover-color       : var(--highlight-color);
-  --check-color            :  var(--color-softblack);
-  --x : var(--color-black)
-
-
-
 }
-[data-theme=dark]{
-  --menu-bg-color          : var(--color-softblack) ;
-  --ico-color              : var(--color-white);
-  --dropdown-bg-color      : var(--color-softblack) ;
-  --dropdown-item-bg-color : var(--color-softblack) ;
-  --link-hover-color       : var(--highlight-color);
-  --check-color            : var(--highlight-color);
+
+[data-theme="light"]{
+  --menu-bg-color          : var(--color-white) !important;  
+  --ico-color              : var(--color-softblack) !important;
+  --dropdown-bg-color      : var(--color-white) !important;
+  --dropdown-item-bg-color : var(--color-white) !important;
+  --link-hover-color       : var(--highlight-color)!important;
+  --check-color            :  var(--color-softblack)!important;
 }
+[data-theme="dark"]{
+  --menu-bg-color          : var(--color-softblack)!important ;
+  --ico-color              : var(--color-white) !important;
+  --dropdown-bg-color      : var(--color-softblack)!important ;
+  --dropdown-item-bg-color : var(--color-softblack)!important ;
+  --link-hover-color       : var(--highlight-color)!important;
+  --check-color            : var(--highlight-color)!important;
 }
+
 
 ::selection {
   color: var(--highlight-color);
 }
 
 html{
-  background-color: var(--menu-bg-color);
+  background-color: var(--menu-bg-color) !important;
 }
 
 body {
   margin: 0;
   padding: 0 ;
-  background-color: var(--menu-bg-color);
+  background-color: var(--menu-bg-color) !important;
 
 }
 
@@ -76,7 +73,9 @@ label{
   padding-top: 10px;
   border-bottom-width: 0px;
   padding-bottom: 10px;
+  padding-left: 30px;
   background-color: var(--menu-bg-color);
+  width: auto;
 }
 
 .menu {
@@ -315,7 +314,7 @@ h1 {
   }
 
   .matrix-video {
-    height: 584px;
-    width: 584px;
+    height: 600px !important;
+    width: 600px !important;
   }
 }
