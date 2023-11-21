@@ -66,7 +66,13 @@ label{
   color: var(--ico-color);
 }
 
+h1 {
+  margin: 20px !important;
+}
 
+#carouselExampleIndicators{
+  margin-top: 100px;
+}
 
 .container-fluid {
   border-top-width: 0px;
@@ -120,19 +126,6 @@ ul.dropdown-menu.show {
 }
 
 
-
-.relative {
-  position: relative;
-}
-
-/* General Styles */
-
-
-
-
-h1 {
-  margin: 20px !important;
-}
 
 /* Shadows */
 .box-shadow-bottom {
